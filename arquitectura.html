@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>APACHE</title>
+    <link rel="stylesheet" href="CSS/style4.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Imagenes/Apache-logo.png">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Imagenes/Apache-logo2.png" alt="Logo de Apache" style="height: 70px;">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="ASF.html">ASF</a></li>
+                <h><li><a href="arquitectura.html">Arquitectura de Apache</a></li></h>
+                <li><a href="industria.html">Uso de Apache en la Industria</a></li>
+                <li><a href="DesayFutu.html">Desafíos y Futuro de Apache</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <center><h2>Arquitectura de Apache</h2></center>
+    </section>
+
+    <!-- Nueva sección sobre módulos de Apache -->
+    <section class="content">
+        <h2>Módulos de Apache</h2>
+        <p>La arquitectura modular de Apache permite a los administradores personalizar el 
+            servidor agregando o eliminando módulos según las necesidades de la aplicación. Algunos módulos clave incluyen:</p>
+        <ul>
+            <li><strong>mod_ssl</strong>: Este módulo habilita el soporte para SSL (Secure Sockets Layer) y TLS 
+                (Transport Layer Security), que son protocolos de seguridad que permiten la transferencia segura de datos 
+                a través de Internet. Es crucial para implementar HTTPS, lo que es esencial para proteger la información 
+                de los usuarios.</li>
+            <li><strong>mod_rewrite</strong>: Proporciona una poderosa herramienta para reescribir URLs sobre la marcha. 
+                Esto es vital para la creación de URLs amigables para SEO y para redirigir o reestructurar URLs de manera dinámica.</li>
+            <li><strong>mod_proxy</strong>: Permite que Apache actúe como un servidor proxy, manejando peticiones en nombre de otro servidor. 
+                Esto es útil en configuraciones donde se desea ocultar la infraestructura interna o distribuir la carga entre varios servidores 
+                backend.</li>
+        </ul>
+    </section>
+
+    <!-- Nueva sección de configuración -->
+    <section class="content">
+        <h2>Configuración y Personalización</h2>
+        <p>La configuración de Apache se realiza principalmente a través de archivos como <code>httpd.conf</code>, donde los administradores pueden 
+            definir la estructura del servidor, los directorios de acceso, las reglas de seguridad, los módulos activos, entre otros. 
+            Apache también permite la personalización por directorio mediante el uso de archivos .htaccess, los cuales son utilizados 
+            para aplicar configuraciones específicas a ciertos directorios sin necesidad de modificar la configuración global 
+            del servidor.</p>
+        <!-- Insertar video -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HFhpdSavfzw" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
+    <!-- Nueva sección de seguridad -->
+    <section class="content">
+        <h2>Seguridad en Apache</h2>
+        <p>La seguridad en Apache es un aspecto fundamental, y existen múltiples estrategias para proteger un servidor Apache, 
+            los cuales son:</p>
+        <ul>
+            <li><strong>Autenticación y Autorización</strong>: Apache soporta múltiples métodos de autenticación, 
+                incluyendo la autenticación básica y digest. Además, se puede configurar la autorización para restringir 
+                el acceso a ciertos recursos o usuarios.</li>
+            <li><strong>SSL/TLS</strong>: La implementación de SSL/TLS mediante mod_ssl es esencial para proteger la transmisión de 
+                datos sensibles a través de HTTPS.</li>
+            <li><strong>mod_proxy</strong>: Actualizar regularmente Apache y sus módulos es crucial para proteger el servidor contra 
+                vulnerabilidades conocidas. Además, se pueden configurar reglas en el firewall y utilizar herramientas como ModSecurity 
+                para proteger contra ataques comunes como inyecciones SQL y cross-site scripting (XSS).</li>
+        </ul>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>“Agradezco tu visita. ¡Explora y disfruta!”</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

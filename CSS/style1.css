@@ -1,0 +1,175 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos del header y la barra de navegación */
+header {
+    background-color: #000; /* Cambiado a negro */
+    padding: 10px 0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Color negro para la barra de menú */
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Menú hamburguesa para móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Estilo para la sección hero */
+.hero {
+    background: #006699;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Contenedor para alinear cuadros */
+.container {
+    display: flex;
+    justify-content: center; /* Centrar ambos cuadros */
+    gap: 20px; /* Espacio entre los cuadros */
+    max-width: 1200px;
+    margin: 50px auto;
+    align-items: center; /* Alinear verticalmente */
+}
+
+/* Cuadro de texto */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 800px;
+}
+
+.content ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+/* Cuadro de imagen */
+.content2 {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px; /* Ancho del cuadro de imagen */
+}
+
+/* Estilo de la imagen */
+.content2 img {
+    max-width: 100%; /* Asegura que la imagen se ajuste al cuadro */
+    height: auto;
+}
+
+/* Pie de página */
+footer {
+    background-color: #006699;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive: Adaptación del menú para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #006699;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s;
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    /* Ajuste para que el contenido se vea correctamente en pantallas pequeñas */
+    .container {
+        flex-direction: column;
+    }
+
+    .content, .content2 {
+        max-width: 100%;
+    }
+}
+

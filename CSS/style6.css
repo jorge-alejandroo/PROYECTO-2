@@ -1,0 +1,157 @@
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeff1;
+    margin-top: 70px;
+}
+
+/* Encabezado hero */
+.hero h1 {
+    margin: 150px 600px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 0.8 es el nivel de transparencia */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Color negro para la barra de menú */
+    position: fixed; /* Hacer la barra fija */
+    top: 0;
+    width: 100%; /* Asegurar que ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+/* Si el título está en un h1 o similar */
+.navbar h {
+    color: white; /* Color blanco del texto del título */
+    margin-right: 0px; /* Añadir margen derecho para crear espacio */
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Agregar margen superior al contenido debajo del menú */
+
+
+/* Estilo para el contenedor de las tarjetas */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación superior */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 0 20px;
+    margin-top: 50px; /* Ajustar el valor para que las tarjetas estén más abajo del título */
+    background-color: #eaeff1;
+}
+
+/* Estilo individual para cada tarjeta */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Ancho de cada tarjeta */
+    padding: 20px;
+    margin-top: 0; /* Asegúrarme de que no haya margen superior */
+    margin-bottom: 50px;
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Estilo para los títulos de las tarjetas */
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+/* Estilo para los párrafos dentro de las tarjetas */
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: #ddd; /* Texto más claro */
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    font-size: 1.1rem;
+    border-top: 5px solid #2980b9; /* Línea decorativa */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Sombra para el pie */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo responsive para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .cards-container {
+        padding: 50px;
+    }
+
+    .card {
+        font-size: 2.8rem;
+    }
+
+    .car img {
+        font-size: 2.8rem;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hero img {
+        max-height: 200px;
+    }
+}
+

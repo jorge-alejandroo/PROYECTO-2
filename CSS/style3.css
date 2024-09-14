@@ -1,0 +1,152 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eaeff1;
+    color: #333;
+    margin-top: 70px; /* Asegúra de que el contenido no se superponga con el header */
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Color negro para la barra de menú */
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Sección Principal - hero */
+.hero {
+    text-align: center;
+    padding: 100px 40px;
+    background-image: url("../Imagenes/fondo\ 2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:33vh;
+    padding: 70px;
+    /*background-color: #e6e6e6;*/
+    margin-top: 50px; /* Ajusta según el tamaño de la barra fija */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Ajusta el tamaño del texto si es necesario */
+    color: white; /* Asegúrate de que el color del texto sea blanco */
+    z-index: 2; /* Asegura que el texto esté por encima de cualquier fondo */
+}
+
+/* Sección de contenido */
+.content {
+    padding: 2rem;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.content img {
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin: 1rem auto;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #222;
+    color: #ddd; /* Texto más claro */
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    font-size: 1.1rem;
+    border-top: 5px solid #2980b9; /* Línea decorativa */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2); /* Sombra para el pie */
+}
+footer p {
+    margin: 0;
+}
+
+/* Estilo responsive para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .content {
+        padding: 50px;
+    }
+
+    .content img {
+        font-size: 2.8rem;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hero img {
+        max-height: 200px;
+    }
+}
+

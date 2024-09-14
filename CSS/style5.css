@@ -1,0 +1,163 @@
+/* Estilo general y reinicio de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #eaeff1; /* Fondo más claro */
+    color: #2c3e50; /* Color de texto oscuro y sobrio */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Color negro para la barra de menú */
+    position: fixed; /* Hacer la barra fija */
+    top: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: #f39c12;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Estilo de las secciones */
+.content {
+    margin: 120px auto; /* Aumentar el margen superior para compensar el menú fijo */
+    padding: 50px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-left: 10px solid #2980b9; /* Barra de color en la izquierda */
+    border-radius: 0px; /* Sin bordes redondeados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    max-width: 1200px;
+    transition: box-shadow 0.3s ease;
+}
+
+.content:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Sombra intensa al hacer hover */
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-left: 5px solid #2980b9; /* Barra de color en los títulos */
+    padding-left: 15px; /* Separación del texto con la barra */
+    color: #2980b9; /* Color del texto del título */
+}
+
+.content p, .content ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.content ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.content ul li {
+    margin-bottom: 0.5rem;
+}
+
+iframe:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra en iframes */
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #222;
+    color: #ecf0f1; /* Color de texto claro */
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    font-size: 1rem;
+    border-top: 4px solid #2980b9; /* Barra de color decorativa */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1); /* Sombra en el pie */
+}
+
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #3498db; /* Cambio de color al hacer hover */
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo responsive para pantallas grandes */
+@media screen and (min-width: 1024px) {
+    .content {
+        padding: 50px;
+    }
+
+    .content h2 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .hero img {
+        max-height: 200px;
+    }
+}
+
